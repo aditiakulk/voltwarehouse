@@ -29,8 +29,10 @@ module.exports = {
     }),
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    static: path.join(__dirname, 'dist'), // Use 'static' instead of 'contentBase'
     compress: true,
     port: 9000,
+    hot: true, // Enable hot module replacement
+    open: true, // Automatically open the browser
   },
 };
