@@ -17,6 +17,10 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.css$/, // Rule for handling CSS files
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
   plugins: [
@@ -25,10 +29,8 @@ module.exports = {
     }),
   ],
   devServer: {
-    static: path.join(__dirname, 'dist'), // Ensure this is 'static'
+    contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 9000,
-    hot: true, // Optional: Enable hot module replacement
-    open: true, // Optional: Automatically open the browser
   },
 };
