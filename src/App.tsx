@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import logo from './assets/logo.png'; // Adjust the path if necessary
+import logo from './assets/logo.png'; // Ensure this path is correct
 
 const App: React.FC = () => {
   return (
@@ -21,6 +21,6 @@ const App: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
 export default App;

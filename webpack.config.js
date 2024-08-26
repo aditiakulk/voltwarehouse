@@ -6,6 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    assetModuleFilename: 'assets/[name][ext]', // Specifies the output path for assets
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
@@ -20,6 +21,10 @@ module.exports = {
       {
         test: /\.css$/, // Rule for handling CSS files
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i, // Rule for handling image files using asset modules
+        type: 'asset/resource',
       },
     ],
   },
