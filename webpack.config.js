@@ -30,11 +30,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
+      template: './public/index.html', // Ensure this path is correct
     }),
   ],
   devServer: {
-    static: path.join(__dirname, 'dist'), // Use 'static' instead of 'contentBase'
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
     compress: true,
     port: 9000,
     hot: true, // Enable hot module replacement

@@ -1,3 +1,5 @@
+/* src/App.css */
+
 body {
   margin: 0;
 }
@@ -17,11 +19,11 @@ body {
 }
 
 .navbar-logo {
-  padding: 20px 20px; /* Adjust padding as needed */
+  padding: 20px 20px;
 }
 
 .navbar-logo img {
-  height: 150px; /* Adjust the height of the logo as needed */
+  height: 150px;
 }
 
 .navbar ul {

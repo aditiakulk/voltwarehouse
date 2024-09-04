@@ -1,19 +1,11 @@
 // src/App.tsx
 import React from 'react';
-import './App.css';
+import './App.css'; // Import the CSS file for styling
 import logo from './assets/logo.png'; // Ensure the path to your logo is correct
 
 const App: React.FC = () => {
   return (
     <div>
-      {/* Header for meta tags */}
-      <header>
-        <title>Voltwarehouse - Home</title>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Welcome to Voltwarehouse - Your go-to place for all products and explorations!" />
-      </header>
-
       {/* Navigation Bar */}
       <nav className="navbar">
         <div className="navbar-logo">
@@ -31,7 +23,7 @@ const App: React.FC = () => {
       <div className="content">
         <h1>Welcome to Voltwarehouse!</h1>
         <p>Your one-stop shop for exploring the best products available.</p>
-        {/* Add more content here as needed */}
+        {/* Additional content */}
       </div>
 
       {/* Footer */}
