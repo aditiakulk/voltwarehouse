@@ -2,6 +2,8 @@
 
 body {
   margin: 0;
+  font-family: Arial, sans-serif; /* Adding a default font for consistency */
+  background-color: #f4f4f4; /* Light background for better contrast */
 }
 
 .navbar {
@@ -10,32 +12,35 @@ body {
   padding: 0;
   overflow: hidden;
   background-color: #000000;
-  position: static;
+  position: fixed; /* Fixed positioning for a sticky navbar */
   top: 0;
   width: 100%;
   display: flex;
   align-items: center;
   height: 50px;
+  z-index: 1000; /* Ensure the navbar is above other content */
 }
 
 .navbar-logo {
-  padding: 20px 20px;
+  padding: 10px 20px;
 }
 
 .navbar-logo img {
-  height: 150px;
+  height: 50px; /* Smaller height for a more compact logo */
 }
 
 .navbar ul {
   margin: 0;
-  padding: 0px;
+  padding: 0;
   list-style: none;
   display: flex;
   flex-grow: 1;
+  justify-content: flex-end; /* Align links to the right */
+  align-items: center; /* Center align vertically */
 }
 
 .navbar li {
-  float: left;
+  margin-right: 20px; /* Space out the navbar items */
 }
 
 .navbar li a {
@@ -55,8 +60,23 @@ body {
 }
 
 .content {
+  padding: 80px 20px; /* Adjust padding to avoid navbar overlap */
+  margin-top: 10px; /* Spacing above content */
+  background-color: #ffffff; /* White background for content */
+  min-height: 1500px; /* Minimum height to display content */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for better separation */
+  border-radius: 8px; /* Rounded corners */
+  max-width: 800px; /* Limit content width for better readability */
+  margin: 80px auto; /* Center content with auto margin */
+}
+
+footer {
+  text-align: center;
   padding: 20px;
-  margin-top: 0px;
-  background-color: #000000;
-  height: 1500px;
+  background-color: #333;
+  color: #fff;
+  position: relative;
+  margin-top: 40px;
+  bottom: 0;
+  width: 100%;
 }
