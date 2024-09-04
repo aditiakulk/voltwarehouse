@@ -1,11 +1,12 @@
+// src/App.tsx
 import React from 'react';
 import './App.css';
-import logo from './assets/logo.png'; // Ensure this path is correct
+import logo from './assets/logo.png'; // Ensure the path to your logo is correct
 
 const App: React.FC = () => {
   return (
     <div>
-      {/* Header Section */}
+      {/* Header for meta tags */}
       <header>
         <title>Voltwarehouse - Home</title>
         <meta charSet="UTF-8" />
@@ -26,14 +27,14 @@ const App: React.FC = () => {
         </ul>
       </nav>
 
-      {/* Main Content Section */}
+      {/* Main Content */}
       <div className="content">
         <h1>Welcome to Voltwarehouse!</h1>
         <p>Your one-stop shop for exploring the best products available.</p>
-        {/* Add more content components here */}
+        {/* Add more content here as needed */}
       </div>
 
-      {/* Footer Section */}
+      {/* Footer */}
       <footer>
         <p>&copy; 2024 Voltwarehouse. All rights reserved.</p>
       </footer>
