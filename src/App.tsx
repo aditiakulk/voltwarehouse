@@ -1,6 +1,6 @@
 // src/App.tsx
 import React from 'react';
-import './App.css'; // Import the CSS file for styling
+import './App.css'; // Make sure this CSS file is correctly loaded
 import logo from './assets/logo.png'; // Ensure the path to your logo is correct
 
 const App: React.FC = () => {
@@ -23,7 +23,7 @@ const App: React.FC = () => {
       <div className="content">
         <h1>Welcome to Voltwarehouse!</h1>
         <p>Your one-stop shop for exploring the best products available.</p>
-        {/* Additional content */}
+        <p>Check out our new collections and explore the latest trends.</p>
       </div>
 
       {/* Footer */}
