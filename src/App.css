@@ -20,17 +20,17 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  height: 120px; /* Increased height for a larger navbar */
+  height: 90px; /* Reduced height for a more compact navbar */
   z-index: 1000;
 }
 
-/* Logo styling - larger logo */
+/* Logo styling - bigger logo */
 .navbar-logo {
   padding: 10px 20px;
 }
 
 .navbar-logo img {
-  height: 100px; /* Increase the height for a larger logo */
+  height: 80px; /* Larger logo to match navbar size */
   object-fit: contain; /* Ensures the logo maintains its aspect ratio */
 }
 
@@ -70,7 +70,7 @@ body {
 /* Content styling */
 .content {
   padding: 100px 20px; /* Adjusted padding to avoid navbar overlap */
-  margin-top: 150px; /* Spacing above content to account for navbar */
+  margin-top: 120px; /* Increased margin to account for the reduced navbar height */
   background-color: #000000; /* Black background for content */
   min-height: calc(100vh - 150px); /* Ensure content takes up full height of the page */
   color: white; /* Ensure text inside content is white */
