@@ -1,34 +1,40 @@
 /* src/App.css */
 
+/* Set the entire background to black and adjust text colors */
 body {
   margin: 0;
-  font-family: Arial, sans-serif; /* Adding a default font for consistency */
-  background-color: #f4f4f4; /* Light background for better contrast */
+  font-family: Arial, sans-serif;
+  background-color: #000000; /* Black background */
+  color: white; /* White text for better contrast */
 }
 
+/* Navbar styling */
 .navbar {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #000000;
-  position: fixed; /* Fixed positioning for a sticky navbar */
+  background-color: #000000; /* Black background for the navbar */
+  position: fixed; /* Keep the navbar at the top */
   top: 0;
   width: 100%;
   display: flex;
   align-items: center;
-  height: 50px;
-  z-index: 1000; /* Ensure the navbar is above other content */
+  height: 120px; /* Increased height for a larger navbar */
+  z-index: 1000;
 }
 
+/* Logo styling - larger logo */
 .navbar-logo {
   padding: 10px 20px;
 }
 
 .navbar-logo img {
-  height: 50px; /* Smaller height for a more compact logo */
+  height: 100px; /* Increase the height for a larger logo */
+  object-fit: contain; /* Ensures the logo maintains its aspect ratio */
 }
 
+/* Navbar links */
 .navbar ul {
   margin: 0;
   padding: 0;
@@ -49,34 +55,39 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 1.1em; /* Slightly larger font for links */
 }
 
 .navbar li a:hover:not(.active) {
   background-color: #111;
 }
 
+/* Active link style */
 .active {
   background-color: #45058e;
 }
 
+/* Content styling */
 .content {
-  padding: 80px 20px; /* Adjust padding to avoid navbar overlap */
-  margin-top: 10px; /* Spacing above content */
-  background-color: #ffffff; /* White background for content */
-  min-height: 1500px; /* Minimum height to display content */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for better separation */
-  border-radius: 8px; /* Rounded corners */
-  max-width: 800px; /* Limit content width for better readability */
-  margin: 80px auto; /* Center content with auto margin */
+  padding: 100px 20px; /* Adjusted padding to avoid navbar overlap */
+  margin-top: 150px; /* Spacing above content to account for navbar */
+  background-color: #000000; /* Black background for content */
+  min-height: calc(100vh - 150px); /* Ensure content takes up full height of the page */
+  color: white; /* Ensure text inside content is white */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  border-radius: 8px;
+  max-width: 1200px; /* Width constraint for content */
+  margin: 0 auto; /* Center content horizontally */
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #333;
+  background-color: #000000; /* Match footer to black background */
   color: #fff;
   position: relative;
-  margin-top: 40px;
+  margin-top: 50px;
   bottom: 0;
   width: 100%;
 }
