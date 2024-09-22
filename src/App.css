@@ -1,93 +1,100 @@
 /* src/App.css */
 
-/* Set the entire background to black and adjust text colors */
+/* Resetting default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full screen background image */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #000000; /* Black background */
-  color: white; /* White text for better contrast */
-}
-
-/* Navbar styling */
-.navbar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #000000; /* Black background for the navbar */
-  position: fixed; /* Keep the navbar at the top */
-  top: 0;
-  width: 100%;
+  background-image: url('./assets/background.jpg'); /* Your background image path */
+  background-size: cover; /* Ensure it covers the full screen */
+  background-position: center;
+  height: 100vh; /* Full-screen height */
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: 90px; /* Reduced height for a more compact navbar */
-  z-index: 1000;
+  color: white; /* White text for better contrast */
+  text-align: center;
 }
 
-/* Logo styling - bigger logo */
-.navbar-logo {
-  padding: 10px 20px;
+/* Centered Logo Styling */
+.center-logo img {
+  width: 250px; /* Adjust size of logo */
+  height: auto;
+  margin-bottom: 20px; /* Add some space between the logo and heading */
 }
 
-.navbar-logo img {
-  height: 100px;
-  object-fit: contain; /* Ensures the logo maintains its aspect ratio */
+/* Main Heading Text */
+.main-heading {
+  font-size: 3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
-/* Navbar links */
-.navbar ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+/* Subheading or description */
+.sub-heading {
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+/* Fixed side navigation */
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the navigation */
   display: flex;
-  flex-grow: 1;
-  justify-content: flex-end; /* Align links to the right */
-  align-items: center; /* Center align vertically */
+  flex-direction: column;
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
 }
 
 .navbar li {
-  margin-right: 20px; /* Space out the navbar items */
+  margin-bottom: 20px;
 }
 
 .navbar li a {
-  display: block;
   color: white;
-  text-align: center;
-  padding: 14px 16px;
+  font-size: 1.5em;
   text-decoration: none;
-  font-size: 1.1em; /* Slightly larger font for links */
+  transition: color 0.3s;
 }
 
-.navbar li a:hover:not(.active) {
-  background-color: #111;
+.navbar li a:hover {
+  color: #f0c040; /* Change color on hover */
 }
 
-/* Active link style */
-.active {
-  background-color: #45058e;
+/* Content sections */
+.section {
+  height: 100vh; /* Full-screen sections */
+  padding: 60px;
+  background-color: #000; /* Sections have black background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-/* Content styling */
-.content {
-  padding: 100px 20px; /* Adjusted padding to avoid navbar overlap */
-  margin-top: 120px; /* Increased margin to account for the reduced navbar height */
-  background-color: #000000; /* Black background for content */
-  min-height: calc(100vh - 150px); /* Ensure content takes up full height of the page */
-  color: white; /* Ensure text inside content is white */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
-  border-radius: 8px;
-  max-width: 1200px; /* Width constraint for content */
-  margin: 0 auto; /* Center content horizontally */
+.section h2 {
+  font-size: 3em;
 }
 
-/* Footer */
+/* Footer styling */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #000000; /* Match footer to black background */
-  color: #fff;
-  position: relative;
-  margin-top: 50px;
-  bottom: 0;
-  width: 100%;
+  background-color: #111;
+  color: white;
 }
