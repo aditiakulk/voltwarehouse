@@ -30,7 +30,7 @@ body {
 }
 
 .navbar-logo img {
-  height: 80px; /* Larger logo to match navbar size */
+  height: 100px;
   object-fit: contain; /* Ensures the logo maintains its aspect ratio */
 }
 
