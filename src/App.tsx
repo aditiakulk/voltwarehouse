@@ -1,56 +1,61 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
-import logo from './assets/logo.png'; // Assuming your logo is in 'assets' folder
+import logo from './assets/logo.png'; // Replace with your logo path
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
-  const [menuOpen, setMenuOpen] = useState(false);
 
   // Simulate loading delay
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000); // Simulates 3 seconds of loading
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); // 3 seconds for loading effect
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className={`App ${!loading ? 'loaded' : ''}`}>
-      {/* Loading screen */}
+    <div>
       {loading && (
-        <div className="loading-screen">
-          <img src={logo} alt="Loading Logo" />
+        <div id="loading-screen">
+          <div id="loading-logo"></div>
         </div>
       )}
 
-      {/* Main content */}
       {!loading && (
-        <div>
-          <nav className={`navbar ${menuOpen ? 'active' : ''}`}>
+        <>
+          {/* Bose-like Navbar */}
+          <nav className="navbar">
             <div className="navbar-logo">
               <img src={logo} alt="Logo" />
             </div>
-
-            <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-              &#9776; {/* Hamburger icon */}
-            </div>
-
             <ul>
               <li><a className="active" href="#home">Home</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#support">Support</a></li>
               <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li>
+                <a href="#services">Services</a>
+                <div className="dropdown-content">
+                  <a href="#design">Design</a>
+                  <a href="#development">Development</a>
+                  <a href="#marketing">Marketing</a>
+                </div>
+              </li>
             </ul>
           </nav>
 
+          {/* Main Content */}
           <div className="content">
-            <h1 className="animated-text">Welcome to Sound Ethics</h1>
-            <p>This is where the main content will go. It should be sleek, clean, and minimalist.</p>
+            <h1>Welcome to Bose</h1>
+            <p>This is where the main content will go.</p>
             <button>Learn More</button>
           </div>
 
+          {/* Footer */}
           <footer>
-            <p>&copy; 2024 Sound Ethics</p>
+            <p>&copy; 2024 Bose</p>
           </footer>
-        </div>
+        </>
       )}
     </div>
   );
