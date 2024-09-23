@@ -8,6 +8,42 @@ body {
   color: white; /* White text for better contrast */
 }
 
+/* Loading screen */
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 10000; /* Ensure it is above all other elements */
+}
+
+.loading-screen img {
+  height: 150px; /* Logo size */
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Hide the loading screen after content is ready */
+.loaded .loading-screen {
+  display: none;
+}
+
 /* Navbar styling */
 .navbar {
   list-style-type: none;
@@ -24,14 +60,14 @@ body {
   z-index: 1000;
 }
 
-/* Logo styling - bigger logo */
+/* Logo styling */
 .navbar-logo {
   padding: 10px 20px;
 }
 
 .navbar-logo img {
-  height: 140px; /* Larger logo to match navbar size */
-  object-fit: contain; /* Ensures the logo maintains its aspect ratio */
+  height: 140px; /* Larger logo */
+  object-fit: contain;
 }
 
 /* Navbar links */
@@ -41,12 +77,12 @@ body {
   list-style: none;
   display: flex;
   flex-grow: 1;
-  justify-content: flex-end; /* Align links to the right */
-  align-items: center; /* Center align vertically */
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .navbar li {
-  margin-right: 20px; /* Space out the navbar items */
+  margin-right: 20px;
 }
 
 .navbar li a {
@@ -55,36 +91,77 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 1.1em; /* Slightly larger font for links */
+  font-size: 1.1em;
 }
 
 .navbar li a:hover:not(.active) {
   background-color: #111;
 }
 
-/* Active link style */
 .active {
   background-color: #45058e;
 }
 
+/* Hamburger menu for mobile */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: white;
+}
+
+.navbar.active ul {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 90px;
+  background-color: black;
+  width: 200px;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+  }
+}
+
 /* Content styling */
 .content {
-  padding: 100px 20px; /* Adjusted padding to avoid navbar overlap */
-  margin-top: 120px; /* Increased margin to account for the reduced navbar height */
-  background-color: #000000; /* Black background for content */
-  min-height: calc(100vh - 150px); /* Ensure content takes up full height of the page */
-  color: white; /* Ensure text inside content is white */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  padding: 100px 20px;
+  margin-top: 120px;
+  background-color: #000000;
+  min-height: calc(100vh - 150px);
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
-  max-width: 1200px; /* Width constraint for content */
-  margin: 0 auto; /* Center content horizontally */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Animated text */
+.animated-text {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInText 2s forwards ease-in-out;
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #000000; /* Match footer to black background */
+  background-color: #000000;
   color: #fff;
   position: relative;
   margin-top: 50px;
