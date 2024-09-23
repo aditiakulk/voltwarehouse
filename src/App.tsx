@@ -1,34 +1,33 @@
-// src/App.tsx
 import React from 'react';
-import './App.css'; // Make sure this CSS file is correctly loaded
-import logo from './assets/logo.png'; // Ensure the path to your logo is correct
+import './App.css';
+import logo from './assets/logo.png'; // Assuming your logo is in 'assets' folder
 
 const App: React.FC = () => {
   return (
     <div>
-      {/* Navigation Bar */}
+      {/* Navbar */}
       <nav className="navbar">
         <div className="navbar-logo">
-          <img src={logo} alt="Voltwarehouse Logo" />
+          <img src={logo} alt="Logo" />
         </div>
         <ul>
           <li><a className="active" href="#home">Home</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#explore">Explore</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
-      {/* Main Content */}
+      {/* Main content */}
       <div className="content">
-        <h1>Welcome to Voltwarehouse!</h1>
-        <p>Your one-stop shop for exploring the best products available.</p>
-        <p>Check out our new collections and explore the latest trends.</p>
+        <h1>Welcome to Sound Ethics</h1>
+        <p>This is where the main content will go, and you can style it however you like!</p>
+        <button>Learn More</button>
       </div>
 
       {/* Footer */}
       <footer>
-        <p>&copy; 2024 Voltwarehouse. All rights reserved.</p>
+        <p>&copy; 2024 Sound Ethics</p>
       </footer>
     </div>
   );
