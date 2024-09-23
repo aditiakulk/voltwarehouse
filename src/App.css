@@ -11,7 +11,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-image: url('./assets/background.jpg'); /* Your background image path */
+  background-image: url('./assets/logo.png'); /* Your background image path */
   background-size: cover; /* Ensure it covers the full screen */
   background-position: center;
   height: 100vh; /* Full-screen height */
