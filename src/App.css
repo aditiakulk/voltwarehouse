@@ -47,7 +47,7 @@ body {
   }
 }
 
-/* Navbar styling (Bose-style) */
+/* Navbar styling (original) */
 .navbar {
   list-style-type: none;
   margin: 0;
@@ -57,45 +57,70 @@ body {
   top: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between; /* Space between logo and links */
+  justify-content: space-between;
   align-items: center;
-  height: 70px;
+  height: 90px;
   z-index: 1000;
   padding: 0 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Logo styling - large logo */
+.navbar-logo {
+  padding: 10px 20px;
 }
 
 .navbar-logo img {
-  height: 50px; /* Smaller logo height for a sleeker navbar */
+  height: 140px; /* Large logo */
   object-fit: contain;
 }
 
-/* Navbar links aligned to the right */
+/* Navbar links, search, and favorites aligned to the right */
 .navbar ul {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
   align-items: center;
+  flex-grow: 1;
+  justify-content: flex-end;
 }
 
 .navbar li {
-  margin-left: 20px; /* Spacing between links */
+  position: relative;
+  margin-right: 20px; /* Space between items */
 }
 
+/* Navbar link styling */
 .navbar li a {
   color: white;
   text-decoration: none;
-  padding: 10px 15px;
-  font-size: 1em;
-  text-transform: uppercase; /* Uppercase style for a modern look */
+  padding: 14px 16px;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Underline on hover */
+.navbar li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+.navbar li a:hover::after {
+  width: 100%;
 }
 
 .navbar li a:hover {
-  color: #999; /* Subtle color change on hover */
+  color: #999; /* Subtle color change */
 }
 
-/* Dropdown styling (for future submenus) */
+/* Dropdown for each navbar item */
 .navbar li:hover .dropdown-content {
   display: block;
 }
@@ -121,14 +146,42 @@ body {
   background-color: #111;
 }
 
+/* Search bar styling */
+.navbar .search-bar {
+  margin-right: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  width: 200px;
+  font-size: 1em;
+}
+
+/* Favorites button styling */
+.navbar .favorites-btn {
+  padding: 10px 16px;
+  background-color: #45058e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.favorites-btn:hover {
+  background-color: #570bb0;
+}
+
 /* Content styling */
 .content {
   padding: 100px 20px; /* Adjusted padding to avoid navbar overlap */
-  margin-top: 120px; /* Increased margin to account for the reduced navbar height */
+  margin-top: 120px;
   background-color: #000000; /* Black background for content */
-  min-height: calc(100vh - 150px); /* Ensure content takes up full height of the page */
-  color: white; /* Ensure text inside content is white */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  min-height: calc(100vh - 150px);
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   max-width: 1200px;
   margin: 0 auto;
