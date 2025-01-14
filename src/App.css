@@ -23,16 +23,25 @@ body {
 }
 
 #loading-logo {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   background-image: url('./assets/logo.png'); /* Replace with your logo path */
   background-size: cover;
-  animation: fadeIn 2s forwards, pulse 2s infinite;
+  animation: fadeIn 1.5s forwards, pulse 1.5s infinite;
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% { opacity: 1; }
+  10% { opacity: 0.9; }
+  20%{ opacity: 0.8; }
+  30% { opacity: 0.7; }
+  40%{ opacity: 0.6; }
+  50% { opacity: 0.5; }
+  60%{ opacity: 0.4; }
+  70% { opacity: 0.3; }
+  80%{ opacity: 0.2; }
+  90% { opacity: 0.1; }
+  100%{ opacity: 0; } 
 }
 
 @keyframes pulse {
@@ -95,7 +104,7 @@ body {
   color: white;
   text-decoration: none;
   padding: 14px 16px;
-  font-size: 1.1em;
+  font-size: 1em;
   text-transform: uppercase;
   position: relative;
 }
@@ -128,22 +137,24 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #333;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  background-color: #480685; /* Dropdown background color */
+  min-width: 120px; /* Dropdown box width */
+  box-shadow: 0px 8px 16px rgba(194, 106, 238, 0.3); /* Box shadow for dropdown */
   z-index: 1;
+  left: -30px; /* Shift dropdown slightly to the left */
 }
 
 .dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
+  color: white; /* Text color for dropdown links */
+  padding: 10px 12px; /* Smaller padding for dropdown items */
+  font-size: 10px; /* Smaller font size for dropdown items */
+  text-decoration: none; /* Remove underline */
   display: block;
-  text-align: left;
+  text-align: left; /* Align dropdown text to the left */
 }
 
 .dropdown-content a:hover {
-  background-color: #111;
+  background-color: #210343; /* Hover effect for dropdown links */
 }
 
 /* Search bar styling */
@@ -183,10 +194,32 @@ body {
   color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
+.content h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid purple; /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Centers the content horizontally */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end), /* Type the text */
+    blink-caret .75s step-end infinite; /* Blink the caret continuously */
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; } /* Stops exactly at the end of the text content */
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: purple; }
+}
 /* Footer */
 footer {
   text-align: center;
