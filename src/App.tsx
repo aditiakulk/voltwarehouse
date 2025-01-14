@@ -31,14 +31,13 @@ const App: React.FC = () => {
             <ul>
               <li><a className="active" href="#home">Home</a></li>
               <li><a href="#products">Products</a></li>
-              <li><a href="#support">Support</a></li>
               <li><a href="#about">About</a></li>
               <li>
                 <a href="#services">Services</a>
                 <div className="dropdown-content">
-                  <a href="#design">Design</a>
-                  <a href="#development">Development</a>
-                  <a href="#marketing">Marketing</a>
+                  <a href="#contact_us">Contact Us</a>
+                  <a href="#partner_up">Partner Up</a>
+                  <a href="#opportunities">Opportunities</a>
                 </div>
               </li>
             </ul>
@@ -46,14 +45,14 @@ const App: React.FC = () => {
 
           {/* Main Content */}
           <div className="content">
-            <h1>Welcome to Bose</h1>
-            <p>This is where the main content will go.</p>
+            <h1>WELCOME TO VOLTWAREHOUSE!</h1>
+            <p>Building something and don't know the right tool to use? Struggling with a new machine or electrical device? VoltWarehouse is your ultimate guide for all things electronic. From beginner-friendly methodologies to detailed descriptions, we bring everything you need to learn, build, and troubleshoot—conveniently in one place!</p>
             <button>Learn More</button>
           </div>
 
           {/* Footer */}
           <footer>
-            <p>&copy; 2024 Bose</p>
+            <p>&copy; 2024 VoltWarehouse</p>
           </footer>
         </>
       )}
