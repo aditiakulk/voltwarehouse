@@ -2,6 +2,7 @@
   "name": "voltwarehouse",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://<username>.github.io/<repository-name>",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --mode development --open --hot",
